@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik</title>
+    <link rel="icon" href="assets/calculator.png" type = "image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- header -->
+    <section id="header">
+        <h1>Welcome to Katik</h1>
+        <p>Hai Sobat, Selamat datang di Katik :] 
+        <br>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar
+        </p>
+        <button onclick="menuSegitiga()" class="btn-menu">Segitiga</button>
+        <button onclick="menuJajarGenjang()" class="btn-menu">Jajar Genjang</button>
+    </section>
+    <!-- menu for choose Segitiga/Jajar Genjang -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#segitiga">Segitiga</a></li>
+            <li><a href="#jajargenjang">Jajar Genjang</a></li>
+        </ul>
+    </nav> -->
+
+    <!-- segitiga -->
+    <section id="segitiga">
+        <h1 class="menu-header">Luas Segitiga</h1>
+        <div class="card">
+            <img src = assets/segitiga.jpg />
+            <p>Rumus Luas Segitiga yaitu : </p>
+            <p>L = 1/2 x a x t</p>
+            <p>Dimana :
+            <br>L = Luas
+            <br>a = Panjang Alas
+            <br>t = Tinggi
+            </p>
+            <h1 class="calculation-area">Hitung Luas Segitiga</h1>
+            <form id="luasSegitiga">
+                <input type="number" id="alasSegitiga" placeholder="Masukkan Alas" required>
+                <br>
+                <input type="number" id="tinggiSegitiga" placeholder="Masukkan Tinggi" required>
+            </form>
+            <p id ="hasilLuasSegitiga"></p>
+            <button onclick="return luasSegitiga()" class="btn-hitung">Hitung</button>
+            <button onclick="resetLuasSegitiga()" class="btn-reset">Reset</button>
+        </div>
+
+        <h1 class="menu-header">Keliling Segitiga</h1>
+        <div class="card">
+            <img src = assets/segitiga.jpg />
+            <p>Rumus Keliling Segitiga yaitu : </p>
+            <p>K = S1 + S2 + S3</p>
+            <p>Dimana :
+            <br>K = Keliling
+            <br>S1 = Sisi A
+            <br>S2 = Sisi B
+            <br>S3 = Sisi C
+            </p>
+            <h1>Hitung Keliling Segitiga</h1>
+            <form id="kelilingSegitiga">
+                <input type="number" id="sisiA" placeholder="Masukkan Sisi 1" required>
+                <br>
+                <input type="number" id="sisiB" placeholder="Masukkan Sisi 2" required>
+                <br>
+                <input type="number" id="sisiC" placeholder="Masukkan Sisi 3" required>
+            </form>
+            <p id="hasilKelilingSegitiga"></p>
+            <button onclick="return kelilingSegitiga()" class="btn-hitung">Hitung</button>
+            <button onclick="resetKelilingSegitiga()" class="btn-reset">Reset</button>
+        </div>
+    </section>
+
+    <!-- jajar genjang -->
+    <section id="jajargenjang">
+        <h1 class="menu-header">Luas Jajar Genjang</h1>
+        <div class="card">
+            <img src = assets/jajargenjang.jpg />
+            <p>Rumus Luas Jajar Genjang yaitu : </p>
+            <p>L = a x t</p>
+            <p>Dimana :
+            <br>L = Luas
+            <br>a = Alas
+            <br>t = Tinggi
+            </p>
+            <h1>Hitung Luas Jajar Genjang</h1>
+            <form id="luasJajarGenjang"> 
+                <input type="number" id="alasJajarGenjang" placeholder="Masukkan Alas" required>
+                <br>
+                <input type="number" id="tinggiJajarGenjang" placeholder="Masukkan Tinggi" required>
+            </form>
+            <p id ="hasilLuasJajarGenjang"></p>
+            <button onclick="return luasJajarGenjang()" class="btn-hitung">Hitung</button>
+            <button onclick="resetLuasJajarGenjang()" class="btn-reset">Reset</button>
+        </div>
+
+        <h1 class="menu-header">Keliling Jajar Genjang</h1>
+        <div class="card">
+            <img src = assets/jajargenjang.jpg />
+            <p>Rumus Keliling Jajar Genjang yaitu : </p>
+            <p>K = 2 * (a+b)</p>
+            <p>Dimana :
+            <br>L = Luas
+            <br>a = Sisi Alas
+            <br>b = Sisi Miring
+            </p>
+            <h1>Hitung Keliling Jajar Genjang</h1>
+            <form id="kelilingJajarGenjang">
+                <input type="number" id="sisiAlas" placeholder="Masukkan Sisi Alas" required>
+                <br>
+                <input type="number" id="sisiMiring" placeholder="Masukkan Sisi Miring" required>
+            </form>
+            <p id ="hasilKelilingJajarGenjang"></p>
+            <button onclick="return kelilingJajarGenjang()" class="btn-hitung">Hitung</button>
+            <button onclick="resetKelilingJajarGenjang()" class="btn-reset">Reset</button>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
